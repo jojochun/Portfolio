@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #39a6b2;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* apply styles to <header> */
+header {
+  padding: 20px 35px;
+  background-color: #39a6b2;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: #fce138;
+  margin: 0;
+  display: inline;
+}
+
+header a {
+  text-decoration: none;
+  color: #fce138;
+}
+
+header nav {
+  float: right;
+  margin: 7px 0;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  margin: 0 30px;
+  font-weight: lighter;
+  font-size: 22px;
+}
+
+.hero {
+  background-image: url("../images/mitchell-luo-4vBN9dMCip0-unsplash.jpg");
+  height: 263px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+.hero img {
+  background-color: #fce138;
+  padding: 4px;
+  width: 200px;
+  color: #024e76;
+  border: solid 2px #024e76;
+  position: absolute;
+  top: 0px;
+  left: 70;
+}
+
+.hero h2 {
+  position: absolute;
+  top: 190px;
+  right: 60px;
+}
+
+section {
+  padding: 60px;
+}
+
+/* FLEXBOX STYLES */
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.aside {
+  width: 20%;
+  text-align: center;
+  margin: 3.5%;
+  color: #fff;
+  font-size: 20px;
+}
+
+.article {
+  width: 70%;
+  margin: 3.5%;
+  text-align: center;
+}
