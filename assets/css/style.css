@@ -5,27 +5,29 @@
 }
 
 body {
-  color: #39a6b2;
+  color: #0a3361;
+  background-color: #d0dde4;
   font-family: Helvetica, Arial, sans-serif;
+  font-weight: lighter;
 }
 
 /* apply styles to <header> */
 header {
   padding: 20px 35px;
-  background-color: #39a6b2;
+  background-color: #17305e;
 }
 
 header h1 {
-  font-weight: bold;
-  font-size: 36px;
-  color: #fce138;
+  font-weight: lighter;
+  font-size: 30px;
+  color: #a6b9c4;
   margin: 0;
   display: inline;
 }
 
 header a {
   text-decoration: none;
-  color: #fce138;
+  color: #a6b9c4;
 }
 
 header nav {
@@ -40,57 +42,171 @@ header nav ul li {
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
-  font-size: 22px;
+  font-size: 14px;
 }
 
 .hero {
-  background-image: url("../images/mitchell-luo-4vBN9dMCip0-unsplash.jpg");
+  background-image: url("../images/Screen\ Shot\ 2021-11-05\ at\ 10.03.41\ PM.png");
   height: 263px;
   background-size: cover;
   background-position: center;
   position: relative;
   display: flex;
+  padding: 1rem 4rem;
 }
 
 .hero img {
-  background-color: #fce138;
-  padding: 4px;
+  background-color: #a6b9c4;
+  padding: 1px;
   width: 200px;
   color: #024e76;
   border: solid 2px #024e76;
   position: absolute;
   top: 0px;
   left: 70;
+  border-radius: 50%;
 }
 
 .hero h2 {
   position: absolute;
   top: 190px;
   right: 60px;
+  font-size: 22px;
+  font-weight: lighter;
+  color: #a6b9c4;
 }
 
 section {
   padding: 60px;
 }
 
-/* FLEXBOX STYLES */
+/* GRID STYLES */
 .main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: stretch;
+  position: absolute;
 }
 
-.aside {
-  width: 20%;
-  text-align: center;
-  margin: 3.5%;
+.grid-1 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "a a b b b b b b"
+    "a a b b b b b b";
+  padding: 5px;
+}
+
+.grid-1-left {
+  grid-area: a;
+  height: 100%;
+}
+
+.grid-1-right {
+  grid-area: b;
+  height: 100%;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  grid-template-areas:
+    "a a b b b b b b"
+    "a a b b b b b b"
+    "a a b b b b b b"
+    "a a c c c d d d"
+    "a a e e e f f f";
+  height: 900px;
+
+  position: relative;
+}
+
+.grid-2-left {
+  grid-area: a;
+  height: 100%;
+}
+
+.feature-work {
+  grid-area: b;
+  background-image: url(../images/hero-bg.jpeg);
+}
+.change {
+  background-size: cover;
+  background-position: center;
+  border: 3px solid rgb(24, 69, 99);
+  padding: 5px;
+}
+
+.change:hover {
+  opacity: 0.7;
+}
+
+.change h3 {
   color: #fff;
-  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px 25px 0 0;
 }
 
-.article {
-  width: 70%;
-  margin: 3.5%;
+.change p {
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 25px 0 0;
+  font-size: 14px;
+}
+
+.addl-1 {
+  grid-area: c;
+
+  background-image: url(../images/Screen\ Shot\ 2021-11-05\ at\ 3.26.07\ PM.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.addl-2 {
+  grid-area: d;
+  background-image: url(../images/guillaume-galtier-5aklrccCH7w-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.addl-3 {
+  grid-area: e;
+  background-image: url(../images/guillaume-galtier-5aklrccCH7w-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.addl-4 {
+  grid-area: f;
+  background-image: url(../images/guillaume-galtier-5aklrccCH7w-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  grid-template-areas: "a a b c d e";
+  height: 800px;
+  position: relative;
+}
+
+.grid-3-left {
+  grid-area: a;
+  height: 100%;
+}
+
+.tel {
+  grid-area: b;
+}
+.email {
+  grid-area: c;
+}
+.git {
+  grid-area: d;
   text-align: center;
+}
+.link {
+  grid-area: e;
 }
