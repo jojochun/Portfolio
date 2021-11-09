@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #a6b9c4;
+  --secondary-color: #0a3361;
+  --tertiary-color: #d0dde4;
+  --quaternary-color: #024e76;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +12,8 @@
 }
 
 body {
-  color: #0a3361;
-  background-color: #d0dde4;
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
   font-family: Helvetica, Arial, sans-serif;
   font-weight: lighter;
 }
@@ -15,52 +22,67 @@ body {
 header {
   padding: 20px 35px;
   background-color: #17305e;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: -webkit-stickyß;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 
 header h1 {
   font-weight: lighter;
   font-size: 30px;
-  color: #a6b9c4;
+  color: var(--primary-color);
   margin: 0;
-  display: inline;
 }
 
 header a {
   text-decoration: none;
-  color: #a6b9c4;
+  color: var(--primary-color);
 }
 
 header nav {
-  float: right;
+  /*float: right;*/
   margin: 7px 0;
 }
 
-header nav ul li {
-  display: inline;
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+  list-style: none;
 }
 
 header nav ul li a {
   margin: 0 30px;
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 1.45vw;
+}
+
+header nav ul li a:hover {
+  opacity: 0.7;
 }
 
 .hero {
   background-image: url("../images/Screen\ Shot\ 2021-11-05\ at\ 10.03.41\ PM.png");
   height: 263px;
   background-size: cover;
-  background-position: center;
+
   position: relative;
+  background-position: center;
   display: flex;
   padding: 1rem 4rem;
 }
 
 .hero img {
-  background-color: #a6b9c4;
+  background-color: var(--primary-color);
   padding: 1px;
   width: 200px;
-  color: #024e76;
-  border: solid 2px #024e76;
+  color: var(--quaternary-color);
+  border: solid 2px var(--quaternary-color);
   position: absolute;
   top: 0px;
   left: 70;
@@ -73,7 +95,7 @@ header nav ul li a {
   right: 60px;
   font-size: 22px;
   font-weight: lighter;
-  color: #a6b9c4;
+  color: var(--primary-color);
 }
 
 section {
@@ -209,4 +231,70 @@ section {
 }
 .link {
   grid-area: e;
+}
+
+/*media queries*/
+@media screen and (max-width: 768px) {
+  /*header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }*/
+  header h1 {
+    font-weight: lighter;
+    font-size: 20px;
+    text-align: left;
+    margin: auto 0;
+    display: inline;
+  }
+
+  header nav ul li a {
+    margin: 0 15px;
+    font-weight: lighter;
+    font-size: 10px;
+  }
+
+  .hero {
+    background-image: url("../images/Screen\ Shot\ 2021-11-05\ at\ 10.03.41\ PM.png");
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    padding: 1rem 4rem;
+  }
+  .hero img {
+    padding: 1px;
+    width: 75px;
+
+    top: 0px;
+    left: 70;
+  }
+  .hero h2 {
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    font-size: 12px;
+    font-weight: lighter;
+    color: var(--primary-color);
+  }
+}
+@media screen and (max-width: 550px) {
+  .hero img {
+    padding: 1px;
+    width: 50px;
+
+    top: 0px;
+    left: 70;
+  }
+
+  .hero h2 {
+    position: absolute;
+    top: 190px;
+
+    right: 60px;
+    font-size: 22px;
+    font-weight: lighter;
+    color: var(--primary-color);
+  }
 }
