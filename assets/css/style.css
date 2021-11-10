@@ -1,6 +1,6 @@
 :root {
   --primary-color: #a6b9c4;
-  --secondary-color: #0a3361;
+  --secondary-color: (--secondary-color);
   --tertiary-color: #d0dde4;
   --quaternary-color: #024e76;
 }
@@ -69,6 +69,7 @@ header nav ul li a:hover {
 .hero {
   background-image: url("../images/Screen\ Shot\ 2021-11-05\ at\ 10.03.41\ PM.png");
   height: 263px;
+  
   background-size: cover;
 
   position: relative;
@@ -234,7 +235,7 @@ section {
 }
 
 /*media queries*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 770px) {
   /*header {
     display: flex;
     flex-direction: row;
@@ -280,21 +281,50 @@ section {
   }
 }
 @media screen and (max-width: 550px) {
+.hero {
+  display: flex
+  flex-wrap: flex
+  justify-content: space-aroung
+  align-items: center
+  position: absolute
+}
+
+
   .hero img {
     padding: 1px;
-    width: 50px;
-
-    top: 0px;
-    left: 70;
+    width: 60px;
+position: relative;
+   
+    align-items: center;
+    justify-content: center;
   }
 
   .hero h2 {
-    position: absolute;
-    top: 190px;
-
-    right: 60px;
-    font-size: 22px;
+   position: absolute;
+  top: 45px;
+  right: 120px;
+    font-size: 14px;
     font-weight: lighter;
-    color: var(--primary-color);
+    color: white;
+    padding: 0;
   }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+    "a a b"
+    "a a c"
+    "a a d"
+    "a a e";
+    height: 200px;
+    position: relative;
+  
+  }
+
+
+  .git {
+    text-align: start;
+  }
+  
 }
