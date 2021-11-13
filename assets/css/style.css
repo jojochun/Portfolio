@@ -109,6 +109,10 @@ section {
   position: absolute;
 }
 
+#about-me {
+  padding-top: 100px;
+}
+
 .grid-1 {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -128,7 +132,9 @@ section {
   grid-area: b;
   height: 100%;
 }
-
+#work {
+  padding-top: 100px;
+}
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
