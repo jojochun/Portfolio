@@ -157,7 +157,7 @@ section {
 
 .feature-work {
   grid-area: b;
-  background-image: url(../images/hero-bg.jpeg);
+  background-image: url(../images/Penguin-Planner.png);
 }
 .change {
   background-size: cover;
@@ -171,14 +171,14 @@ section {
 }
 
 .change h3 {
-  color: var(--quinary-color);
+  color: orange;
   display: flex;
   justify-content: flex-end;
   padding: 25px 25px 0 0;
 }
 
 .change p {
-  color: var(--quinary-color);
+  color: black;
   display: flex;
   justify-content: flex-end;
   padding: 0 25px 0 0;
@@ -195,7 +195,7 @@ section {
 
 .addl-2 {
   grid-area: d;
-  background-image: url(../images/guillaume-galtier-5aklrccCH7w-unsplash.jpg);
+  background-image: url(../images/hero-bg.jpeg);
   background-size: cover;
   background-position: center;
 }
@@ -209,7 +209,7 @@ section {
 
 .addl-4 {
   grid-area: f;
-  background-image: url(../images/guillaume-galtier-5aklrccCH7w-unsplash.jpg);
+  background-image: url(../images/sunnyweekend.png);
   background-size: cover;
   background-position: center;
 }
